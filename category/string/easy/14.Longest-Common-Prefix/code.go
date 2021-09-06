@@ -1,4 +1,4 @@
-package longestcommonprefix14
+package string
 
 import "strings"
 

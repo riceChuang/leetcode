@@ -1,4 +1,4 @@
-package romantointerger13
+package string
 
 func romanToInt(s string) int {
 	var normalValue = make(map[string]int, 7)

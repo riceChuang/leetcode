@@ -1,42 +1,42 @@
-package romantointerger13
+package math
 
 import "testing"
 
-func Test_romanToInt(t *testing.T) {
+func Test_isPalindrome(t *testing.T) {
 	type args struct {
-		s string
+		x int
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want bool
 	}{
 		{
 			"test",
 			args{
-				s: "III",
+				x: 123,
 			},
-			3,
+			false,
 		},
 		{
 			"test",
 			args{
-				s: "IV",
+				x: 1234321,
 			},
-			4,
+			true,
 		},
 		{
 			"test",
 			args{
-				s: "LVIII",
+				x: -1234321,
 			},
-			58,
+			false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := romanToInt(tt.args.s); got != tt.want {
-				t.Errorf("romanToInt() = %v, want %v", got, tt.want)
+			if got := isPalindrome(tt.args.x); got != tt.want {
+				t.Errorf("isPalindrome() = %v, want %v", got, tt.want)
 			}
 		})
 	}

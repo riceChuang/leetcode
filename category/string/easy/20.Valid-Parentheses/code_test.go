@@ -1,10 +1,10 @@
-package palindromenumber9
+package string
 
 import "testing"
 
-func Test_isPalindrome(t *testing.T) {
+func Test_isValid(t *testing.T) {
 	type args struct {
-		x int
+		s string
 	}
 	tests := []struct {
 		name string
@@ -14,29 +14,22 @@ func Test_isPalindrome(t *testing.T) {
 		{
 			"test",
 			args{
-				x: 123,
+				s: "{}()({",
 			},
 			false,
 		},
 		{
 			"test",
 			args{
-				x: 1234321,
+				s: "{}()",
 			},
 			true,
-		},
-		{
-			"test",
-			args{
-				x: -1234321,
-			},
-			false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := isPalindrome(tt.args.x); got != tt.want {
-				t.Errorf("isPalindrome() = %v, want %v", got, tt.want)
+			if got := isValid(tt.args.s); got != tt.want {
+				t.Errorf("isValid() = %v, want %v", got, tt.want)
 			}
 		})
 	}

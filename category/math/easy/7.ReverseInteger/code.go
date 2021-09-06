@@ -1,4 +1,4 @@
-package reverseinteger7
+package math
 
 import "math"
 

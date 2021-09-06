@@ -1,4 +1,4 @@
-package palindromenumber9
+package math
 
 import "strconv"
 
