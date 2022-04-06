@@ -8,7 +8,7 @@ type ListNode struct {
 // 解法一 单链表
 func isPalindrome(head *ListNode) bool {
 	if head == nil || head.Next == nil {
-		return false
+		return true
 	}
 	res := true
 	// 寻找中间结点
@@ -18,7 +18,6 @@ func isPalindrome(head *ListNode) bool {
 		p1 = p1.Next
 		p2 = p2.Next.Next
 	}
-
 	// 反转链表后半部分  1->2->3->4->5->6 to 1->2->3->6->5->4
 	preMiddle := p1
 	preCurrent := p1.Next
@@ -50,6 +49,3 @@ func isPalindrome(head *ListNode) bool {
 	}
 	return res
 }
-
-
-
